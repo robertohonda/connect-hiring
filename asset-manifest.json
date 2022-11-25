@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/connect-hiring/static/css/main.073c9b0a.css",
+    "main.js": "/connect-hiring/static/js/main.a076b6f2.js",
+    "static/js/787.9f595671.chunk.js": "/connect-hiring/static/js/787.9f595671.chunk.js",
+    "static/media/logo.svg": "/connect-hiring/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/connect-hiring/index.html",
+    "main.073c9b0a.css.map": "/connect-hiring/static/css/main.073c9b0a.css.map",
+    "main.a076b6f2.js.map": "/connect-hiring/static/js/main.a076b6f2.js.map",
+    "787.9f595671.chunk.js.map": "/connect-hiring/static/js/787.9f595671.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a076b6f2.js"
+  ]
+}
