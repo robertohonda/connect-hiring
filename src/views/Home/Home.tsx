@@ -19,6 +19,9 @@ const theme = createTheme({
     h1: {
       fontFamily: "Baskerville",
     },
+    h6: {
+      fontFamily: "Baskerville",
+    },
     button: {
       fontFamily: "Baskerville",
     },

@@ -1,25 +1,21 @@
 import React from "react";
-import Drawer from "@mui/material/Drawer";
 import Grid from "../Grid/Grid";
 import Link from "../Link/Link";
 import IconButton from "../IconButton/IconButton";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { Fade } from "@mui/material";
 
 interface CustomDrawerProps {
   open: boolean;
 }
 
 const styles = {
-  root: {
-    ".MuiPaper-root": {
-      height: "100%",
-      background: "rgba(255, 255, 255, 0.8)",
-      backdropFilter: "blur(2.5px)",
-    },
-  },
   container: {
     height: "100%",
+    background: "rgba(255, 255, 255, 0.8)",
+    backdropFilter: "blur(2.5px)",
+    position: "fixed",
   },
 };
 
@@ -78,11 +74,9 @@ const CustomDrawer = ({ open }: CustomDrawerProps) => {
   );
 
   return (
-    <Drawer
-      anchor="bottom"
-      open={open}
-      sx={{ ...styles.root }}
-      transitionDuration={400}
+    <Fade
+      in={open}
+      timeout={400}
     >
       <Grid
         container
@@ -98,7 +92,7 @@ const CustomDrawer = ({ open }: CustomDrawerProps) => {
           {contactSection}
         </Grid>
       </Grid>
-    </Drawer>
+    </Fade>
   );
 };
 
