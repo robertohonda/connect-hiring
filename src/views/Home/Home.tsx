@@ -1,6 +1,7 @@
 import React from "react";
 import AppBar from "../../components/AppBar/AppBar";
 import Drawer from "../../components/Drawer/Drawer";
+import Toolbar from "../../components/Toolbar/Toolbar"
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
@@ -43,6 +44,7 @@ function Home() {
         onOpenDrawer={handleDrawerOpen}
         onCloseDrawer={handleDrawerClose}
       />
+      <Toolbar/>
       <Drawer open={drawerOpen} />
       <main style={{ height: "100%", width: "100%" }}>
         <div

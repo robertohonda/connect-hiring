@@ -35,7 +35,7 @@ const CustomAppBar = ({
   return (
     <Box sx={{ ...styles.box }}>
       <StyledAppBar
-        position="relative"
+        // position="relative"
         color="secondary"
       >
         <Toolbar>
