@@ -2,6 +2,9 @@ import React from "react";
 import Drawer from "@mui/material/Drawer";
 import Grid from "../Grid/Grid";
 import Link from "../Link/Link";
+import IconButton from "../IconButton/IconButton";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 interface CustomDrawerProps {
   open: boolean;
@@ -16,16 +19,69 @@ const styles = {
     },
   },
   container: {
-    height: "100%"
-  }
+    height: "100%",
+  },
 };
 
 const CustomDrawer = ({ open }: CustomDrawerProps) => {
+  const linksSection = ["About", "Item", "Shop", "Press"].map((link) => (
+    <Grid item key={link}>
+      <Link
+        href="#text-buttons"
+        fontFamily="Baskerville"
+        color="#505B5F"
+        fontSize="20px"
+        underline="none"
+      >
+        {link}
+      </Link>
+    </Grid>
+  ));
+
+  const contactSection = (
+    <>
+      <Grid item>
+        <Link
+          href="#text-buttons"
+          fontFamily="Baskerville"
+          color="#505B5F"
+          fontSize="14"
+          underline="none"
+        >
+          Tel: 0312345678
+        </Link>
+      </Grid>
+      <Grid item>
+        <Link
+          href="#text-buttons"
+          fontFamily="Baskerville"
+          color="#505B5F"
+          fontSize="14"
+          underline="none"
+        >
+          Email: onlysweater@jp.com
+        </Link>
+      </Grid>
+      <Grid item container justifyContent="center">
+        <Grid item>
+          <IconButton size="large">
+            <InstagramIcon fontSize="inherit" />
+          </IconButton>
+        </Grid>
+        <Grid item>
+          <IconButton size="large">
+            <FacebookIcon fontSize="inherit" />
+          </IconButton>
+        </Grid>
+      </Grid>
+    </>
+  );
+
   return (
     <Drawer
       anchor="bottom"
       open={open}
-      sx={{...styles.root}}
+      sx={{ ...styles.root }}
       transitionDuration={400}
     >
       <Grid
@@ -35,75 +91,11 @@ const CustomDrawer = ({ open }: CustomDrawerProps) => {
         alignItems="center"
         sx={{ ...styles.container }}
       >
-        <Grid item container direction="column" alignItems="center" spacing={6}>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="20px"
-              underline="none"
-            >
-              About
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="20px"
-              underline="none"
-            >
-              Item
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="20px"
-              underline="none"
-            >
-              Shop
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="20px"
-              underline="none"
-            >
-              Press
-            </Link>
-          </Grid>
+        <Grid item container direction="column" alignItems="center" spacing={3}>
+          {linksSection}
         </Grid>
-        <Grid item container direction="column" alignItems="center" spacing={4}>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="14"
-              underline="none"
-            >
-              Tel: 0312345678
-            </Link>
-          </Grid>
-          <Grid item>
-            <Link
-              href="#text-buttons"
-              fontFamily="Baskerville"
-              color="#505B5F"
-              fontSize="14"
-              underline="none"
-            >
-              Email: onlysweater@jp.com
-            </Link>
-          </Grid>
+        <Grid item container direction="column" alignItems="center" spacing={1}>
+          {contactSection}
         </Grid>
       </Grid>
     </Drawer>
