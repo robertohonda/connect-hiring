@@ -1,9 +1,11 @@
 import React from "react";
 import AppBar from "../../components/AppBar/AppBar";
 import Drawer from "../../components/Drawer/Drawer";
-import Toolbar from "../../components/Toolbar/Toolbar"
+import Box from "../../components/Box/Box";
+import Toolbar from "../../components/Toolbar/Toolbar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import Header from "../Header/Header";
 
 const theme = createTheme({
   palette: {
@@ -15,7 +17,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Noto Serif JP, Baskerville',
+    fontFamily: "Noto Serif JP, Baskerville",
     h1: {
       fontFamily: "Baskerville",
     },
@@ -28,7 +30,14 @@ const theme = createTheme({
   },
 });
 
-function Home() {
+const styles = {
+  root: {
+    height: "100%",
+    width: "100%",
+  },
+};
+
+const Home = () => {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -47,22 +56,13 @@ function Home() {
         onOpenDrawer={handleDrawerOpen}
         onCloseDrawer={handleDrawerClose}
       />
-      <Toolbar/>
+      <Toolbar />
       <Drawer open={drawerOpen} />
-      <main style={{ height: "100%", width: "100%" }}>
-        <div
-          style={{
-            height: "100%",
-            backgroundImage: `url('${
-              process.env.PUBLIC_URL + "/images/image1.svg"
-            }')`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        />
-      </main>
+      <Box component="main" sx={styles.root}>
+        <Header />
+      </Box>
     </ThemeProvider>
   );
-}
+};
 
 export default Home;
