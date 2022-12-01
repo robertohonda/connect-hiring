@@ -2,11 +2,6 @@ import { Box, Grid, Theme } from "@mui/material";
 import React from "react";
 
 const styles = {
-  root: {
-    marginTop: (theme: Theme) => theme.spacing(4),
-    marginLeft: (theme: Theme) => theme.spacing(2),
-    marginRight: (theme: Theme) => theme.spacing(2),
-  },
   image: {
     height: "100%",
     backgroundRepeat: "no-repeat",
@@ -26,6 +21,9 @@ const styles = {
       md: "flex",
     },
     height: 600,
+    marginTop: (theme: Theme) => theme.spacing(4),
+    marginLeft: (theme: Theme) => theme.spacing(2),
+    marginRight: (theme: Theme) => theme.spacing(2),
   },
   desktopImage1: {
     backgroundImage: `url('${process.env.PUBLIC_URL + "/images/image1.svg"}')`,
@@ -45,10 +43,10 @@ const styles = {
 };
 
 const Header = () => {
-  const mobile = <Box sx={{ ...styles.image, ...styles.mobileImage }} />;
+  const mobile = <Box sx={{ ...styles.image, ...styles.mobileImage }} component="header"/>;
 
   const desktop = (
-    <Grid container alignItems="flex-end" sx={styles.desktopRoot}>
+    <Grid container alignItems="flex-end" sx={styles.desktopRoot} component="header">
       <Grid item xs={4} height="100%">
         <Box sx={{ ...styles.image, ...styles.desktopImage1 }} />
       </Grid>
@@ -67,10 +65,10 @@ const Header = () => {
   );
 
   return (
-    <Box sx={styles.root}>
+    <>
       {mobile}
       {desktop}
-    </Box>
+    </>
   );
 };
 
