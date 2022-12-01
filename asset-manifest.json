@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/connect-hiring/static/css/main.e6c13ad2.css",
-    "main.js": "/connect-hiring/static/js/main.5e0ebd0c.js",
+    "main.js": "/connect-hiring/static/js/main.ece0b67d.js",
     "static/js/787.9f595671.chunk.js": "/connect-hiring/static/js/787.9f595671.chunk.js",
     "index.html": "/connect-hiring/index.html",
     "main.e6c13ad2.css.map": "/connect-hiring/static/css/main.e6c13ad2.css.map",
-    "main.5e0ebd0c.js.map": "/connect-hiring/static/js/main.5e0ebd0c.js.map",
+    "main.ece0b67d.js.map": "/connect-hiring/static/js/main.ece0b67d.js.map",
     "787.9f595671.chunk.js.map": "/connect-hiring/static/js/787.9f595671.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5e0ebd0c.js"
+    "static/js/main.ece0b67d.js"
   ]
 }
