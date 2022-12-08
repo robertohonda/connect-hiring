@@ -23,7 +23,7 @@ const CustomDrawer = ({ open }: CustomDrawerProps) => {
   const linksSection = ["About", "Item", "Shop", "Press"].map((link) => (
     <Grid item key={link}>
       <Link
-        href="#text-buttons"
+        href="#about"
         fontFamily="Baskerville"
         color="#505B5F"
         fontSize="20px"

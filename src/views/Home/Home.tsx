@@ -6,6 +6,7 @@ import Toolbar from "../../components/Toolbar/Toolbar";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Header from "../Header/Header";
+import About from "../About/About";
 
 const theme = createTheme({
   palette: {
@@ -60,6 +61,7 @@ const Home = () => {
       <Drawer open={drawerOpen} />
       <Box component="main" sx={styles.root}>
         <Header />
+        <About />
       </Box>
     </ThemeProvider>
   );

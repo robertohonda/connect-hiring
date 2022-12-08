@@ -82,7 +82,7 @@ const CustomAppBar = ({
     <Box sx={{...styles.desktopMenu}}>
       {["About", "Item", "Shop", "Info", "Press"].map((link) => (
         <Link
-          href="#text-buttons"
+          href="#about"
           fontFamily="Baskerville"
           color="#505B5F"
           fontSize="16px"
@@ -119,8 +119,7 @@ const CustomAppBar = ({
             fontSize="12px"
             fontFamily="Baskerville"
             color="#505B5F"
-            variant="h6"
-            component="div"
+            component="h1"
             sx={{ ...styles.name }}
           >
             We sell only sweaters
