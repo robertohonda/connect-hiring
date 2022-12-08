@@ -1,5 +1,6 @@
 import { Box, Grid, Theme } from "@mui/material";
 import React from "react";
+import SectionDivider from "../../components/SectionDivider/SectionDivider";
 
 const styles = {
   image: {
@@ -68,6 +69,7 @@ const Header = () => {
     <>
       {mobile}
       {desktop}
+      <SectionDivider text="新規登録で１０％オフキャンペーン実施中！"/>
     </>
   );
 };
