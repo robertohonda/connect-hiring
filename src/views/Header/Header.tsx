@@ -21,9 +21,9 @@ const styles = {
       md: "flex",
     },
     height: 600,
-    marginTop: (theme: Theme) => theme.spacing(4),
-    marginLeft: (theme: Theme) => theme.spacing(2),
-    marginRight: (theme: Theme) => theme.spacing(2),
+    paddingTop: (theme: Theme) => theme.spacing(4),
+    paddingLeft: (theme: Theme) => theme.spacing(2),
+    paddingRight: (theme: Theme) => theme.spacing(2),
   },
   desktopImage1: {
     backgroundImage: `url('${process.env.PUBLIC_URL + "/images/image1.svg"}')`,
