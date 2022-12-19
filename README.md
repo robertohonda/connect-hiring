@@ -1,5 +1,5 @@
 
-Front UI Coding Assignment
+# Front UI Coding Assignment
 
 Deadline:
 None
@@ -12,6 +12,13 @@ Assessment Items :
 2. Is the display (view) of the component separated from the logic?
 3. Is the markup written in an understandable way?
 4. Is naming of IDs and classes appropriate?
+
+## Todos
+- Items Section
+- Info Section
+- Contact Section
+- Footer
+- Adjust Spacings
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
