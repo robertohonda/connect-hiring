@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Grid, Link, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import LinkButton from "../../components/LinkButton/LinkButton";
 import getPublicPath from "../../utils/getPublicPath";
 
 const styles = {
@@ -93,17 +94,7 @@ const About = () => {
         </Typography>
       </Grid>
       <Grid item>
-        <Link
-          underline="always"
-          color="inherit"
-          lineHeight={"39px"}
-          sx={{ paddingBottom: "6px", textUnderlineOffset: 6 }}
-          fontFamily="Baskerville"
-          fontSize={16}
-          href="#about-more"
-        >
-          &nbsp;&nbsp;View more→&nbsp;&nbsp;
-        </Link>
+        <LinkButton>&nbsp;&nbsp;View more→&nbsp;&nbsp;</LinkButton>
       </Grid>
     </Grid>
   );
@@ -133,13 +124,14 @@ const About = () => {
           direction="column"
           alignItems="center"
           justifyContent="center"
+          wrap="nowrap"
         >
           <Grid item>
             <Typography fontSize={24} component="h2" color="black">
               About
             </Typography>
           </Grid>
-          <Grid item sx={{marginTop: "50px"}}>
+          <Grid item sx={{ marginTop: "50px" }}>
             <Typography fontSize={16} color="#505A5F">
               着るだけで心が満たされていくそんなセーターを作るために
               <br />
@@ -155,17 +147,7 @@ const About = () => {
               <br />
               あなたの冬が特別なものになりますように...
               <br />
-              <Link
-                underline="always"
-                color="#000000"
-                lineHeight={"39px"}
-                sx={{ paddingBottom: "6px", textUnderlineOffset: 6}}
-                fontFamily="Baskerville"
-                fontSize={16}
-                href="#about-more"
-              >
-                &nbsp;&nbsp;View more→&nbsp;&nbsp;
-              </Link>
+              <LinkButton>&nbsp;&nbsp;View more→&nbsp;&nbsp;</LinkButton>
             </Typography>
           </Grid>
         </Grid>
@@ -173,10 +155,12 @@ const About = () => {
     </Grid>
   );
 
-  return <>
-  {mobile}
-  {desktop}
-  </>
+  return (
+    <>
+      {mobile}
+      {desktop}
+    </>
+  );
 };
 
 export default About;
